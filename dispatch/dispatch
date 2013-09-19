@@ -1,0 +1,11 @@
+%% -*- mode: erlang -*-
+%% Dispatch rules for mod_zotonic.
+[
+ {blog,            ["blog"],                           controller_template,  [ {template, "blog/home.tpl"}, {id, page_blog} ]},
+ {blog_page,       ["blog", "page", id],               controller_page,      [ {template, "blog/page.tpl"} ]},
+ {blog_article,    ["blog", "article", id, slug],      controller_page,      [ {template, "blog/article.tpl"}, {cat, article} ]},
+ {blog_keyword,    ["blog", "tag", id, slug],          controller_page,      [ {template, "blog/by_keyword.tpl"} ]},
+  
+ {blog_archives_y, ["blog", "archive", year],          controller_template,  [ {template, "blog/archives.tpl"}, {cat, article} ]},
+ {blog_archives_m, ["blog", "archive", year, month],   controller_template,  [ {template, "blog/archives.tpl"}, {cat, article} ]}
+].

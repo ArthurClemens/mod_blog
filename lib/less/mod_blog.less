@@ -1,0 +1,130 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+.blog-header {
+    font-size: 21px;
+    padding: 30px 15px 40px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15);
+    color: #cdbfe3;
+    background-color: #563d7c;
+    
+    h1 {
+        font-size: 60px;
+        color: #fff;
+        line-height: 1;
+    }
+}
+li.media {
+    margin-top: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    
+    > a.pull-left {
+        margin-right: 20px;
+    }
+}
+.blog-sidebar {
+    margin: 0 0 20px 0;
+    background: #f7f5fa;
+    border-radius: 5px;
+//    text-shadow: 0 1px 0 #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 5px 20px;
+    }
+
+    .nav {
+        color: #999;
+        margin: 0;
+        
+        > li > a {
+            padding: 5px 20px;
+        }
+    
+        .nav {
+            > li > a {
+                padding: 5px 20px 5px 40px;
+            }
+        }
+        
+        & + h2,
+        & + h3,
+        & + h4,
+        & + h5,
+        & + h6 {
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e5e5;
+        }
+        
+        &.blog-media {
+            > li > a {
+                padding: 0;
+                margin: 10px 20px;
+            }
+        }
+    }
+    ul.blog-tags {
+        list-style: none;
+        padding: 0 20px;
+        
+        > li {
+            padding: 0;
+            margin: 0;
+            display: inline;
+            font-size: 0;
+            
+            a {
+                display: block;
+//                background: #ecf1f7;
+//                color: #538dc2;
+                float: left;
+                font-size: 12px;
+                line-height: 1.4;
+                margin: 5px 5px 0 0;
+                width: auto;
+                
+//                &:hover {
+//                    background: #19558d;
+//                    color: #fff;
+//                }
+            }
+        }
+    }
+}
+
+.blog-article {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+// COMMENTS MODULE
+
+#comments-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    h3 {
+        font-size: 100%;
+        font-weight: bold;
+    }
+    .avatar {
+        float: left;
+        margin: 0 20px 0 0;
+    }
+    .comment-meta,
+    .comment-body {
+        margin: 0 0 0 50px;
+    }
+}
+#comments-form {
+    textarea#message {
+        height: 4em;
+        margin: 0 0 10px 0;
+    }
+}
