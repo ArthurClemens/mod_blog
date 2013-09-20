@@ -4,7 +4,9 @@
             <h4>{_ Tags _}</h4>
             <ul class="blog-tags clearfix">
                 {% for id in tags %}
-                    <li><a class="label label-info" href="{% url blog_keyword id=id slug=m.rsc[id].slug %}">{{ m.rsc[id].title }}</a></li>
+                    {% if id.is_published %}
+                        <li><a class="label label-info" href="{% url blog_keyword id=id %}">{{ m.rsc[id].title }}</a></li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>
