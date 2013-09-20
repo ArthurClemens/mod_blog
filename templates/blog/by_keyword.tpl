@@ -3,7 +3,7 @@
 {% block title %}{_ Articles for _} "{{ m.rsc[q.id].title }}"{% endblock %}
 
 {% block chapeau %}
-    <div class="col-md-12">
+    <div class="span12">
     	<h1>{{ m.rsc[q.id].title }} <small>{_ category archives _}</small></h1>
     </div>    
 {% endblock %}
@@ -20,7 +20,7 @@
             {% endfor %}
         </ul>
         
-		{% pager result=result dispatch='keyword' id=id slug=m.rsc[id].slug %}
+		{% pager result=result dispatch=zotonic_dispatch id=id slug=m.rsc[id].slug %}
 
 	{% endwith %}
 

@@ -3,7 +3,7 @@
 {% block title %}{_ Archive for _} {% if q.month %}{{ q.month }}, {% endif %}{{ q.year }}{% endblock %}
 
 {% block chapeau %}
-    <div class="col-md-12">
+    <div class="span12">
     	<h1>{% if q.month %}{{ [q.year, q.month, 1]|date:"F" }}, {% endif %}{{ q.year }} <small>{_ archives _}</small></h1>
     </div>    
 {% endblock %}

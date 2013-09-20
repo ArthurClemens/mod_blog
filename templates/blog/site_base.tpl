@@ -29,13 +29,13 @@
                 <div class="row content">
                     {% block content_area %}
 
-                        <div class="col-md-9">
+                        <div class="span9">
                             {% block content %}
                                 <!-- The default content goes here. -->
                             {% endblock %}
                         </div>
 
-                        <div id="sidebar" class="col-md-3">
+                        <div id="sidebar" class="span3">
                             {% block sidebar %}
                                 <!-- The sidebar content goes here. -->
                             {% endblock %}
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12" id="footer">
+                    <div class="span12" id="footer">
                         <!-- The footer content goes here. -->
                     </div>
                 </div>

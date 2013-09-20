@@ -23,7 +23,6 @@ Create overriding templates in your `templates/blog/` directory. For instance, c
 ## Differences with skeleton blog
 
 * Changed dispatch rules with a "blog namespace"
-* Uses Bootstrap 3
 * Changed templates to better fit a Bootstrap-based blog
 * Added `_comments.tpl` for easier overriding of the comment implementation
 * Added checks for published state

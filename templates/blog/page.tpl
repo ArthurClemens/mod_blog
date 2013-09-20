@@ -3,7 +3,7 @@
 {% block title %}{{ m.rsc[id].title }}{% endblock %}
 
 {% block chapeau %}
-	<header class="col-md-12">
+	<header class="span12">
         <h1>{{ m.rsc[id].title }}</h1>
     </header>
 {% endblock %}

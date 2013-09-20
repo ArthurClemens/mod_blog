@@ -2,7 +2,7 @@
 
 {% block html_head_extra %}
     {% lib
-        "css/bootstrap.min.css"
+        "css/twitter-bootstrap.min.css"
         "css/mod_blog.css"
     %}
 {% endblock %}
@@ -10,13 +10,13 @@
 {% block content_area %}
     {% block chapeau %}{% endblock %}
 
-    <div class="col-md-9">
+    <div class="span9">
         {% block content %}
             <!-- The default content goes here. -->
         {% endblock %}
     </div>
 
-    <div id="sidebar" class="col-md-3">
+    <div id="sidebar" class="span3">
         {% block sidebar %}
             {% include "blog/_sidebar.tpl" %}
         {% endblock %}

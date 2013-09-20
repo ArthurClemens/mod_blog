@@ -3,7 +3,7 @@
 {% block title %}{{ m.rsc[id].title }}{% endblock %}
 
 {% block chapeau %}
-	<div class="col-md-12">
+	<div class="span12">
     	<h1>{{ m.rsc[id].title }}</h1>
     	{% include "blog/_article_meta.tpl" id=id %}
     </div>

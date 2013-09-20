@@ -3,7 +3,7 @@
 {% block title %}{{ m.rsc[id].title }}{% endblock %}
 
 {% block hero %}
-    <div class="blog-header">
+    <div class="hero-unit">
         <div class="container">
             <h1>{{ m.rsc[id].title }}</h1>
             {{ m.rsc[id].body }}
