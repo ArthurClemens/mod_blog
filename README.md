@@ -14,7 +14,7 @@ Zotonic <= 0.6:
 
         git clone https://github.com/ArthurClemens/mod_blog.git mod_blog
 
-Activate the module in System > Modules.
+Activate the module in Admin > System > Modules.
 
 
 ### Required steps
