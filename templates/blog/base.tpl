@@ -1,12 +1,5 @@
 {% extends "blog/site_base.tpl" %}
 
-{% block html_head_extra %}
-    {% lib
-        "css/twitter-bootstrap.min.css"
-        "css/mod_blog.css"
-    %}
-{% endblock %}
-
 {% block content_area %}
     {% block chapeau %}{% endblock %}
 

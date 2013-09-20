@@ -2,6 +2,9 @@
 
 {% block title %}{{ m.rsc[id].title }}{% endblock %}
 
+{% block mod_seo_shorturl %}{% endblock %}
+{% block mod_seo_canonical %}{% endblock %}
+
 {% block chapeau %}
 	<div class="span12">
     	<h1>{{ m.rsc[id].title }}</h1>
@@ -11,9 +14,6 @@
 
 {% block content %}
 
-    
-    
-    
 {#
 No summary on the detail page
 
