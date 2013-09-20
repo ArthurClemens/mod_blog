@@ -1,15 +1,21 @@
 # Blog module for Zotonic
 
-This is a Zotonic blog as separate module. In contrast to the default skeleton blog, this makes it easier to add a blog section to your current site.
+A Zotonic blog as separate module. In contrast to the default skeleton blog, this makes it easier to add a blog section to your current site.
 
 Upon activation the module adds the blog at `yoursite.com/blog/`.
 
 ## Installation
 
-1. Download or `git clone` this module into your Modules directory.
-1. Activate the module in System > Modules.
+Zotonic >= 0.7:
 
-By default no comments are shown; activate the Comments module first.
+        zotonic installmodule mod_blog
+
+Zotonic <= 0.6:
+
+        git clone https://github.com/ArthurClemens/mod_bulk_commands.git mod_bulk_commands
+
+Activate the module in System > Modules.
+
 
 ### Required steps
 
@@ -22,6 +28,8 @@ By default no comments are shown; activate the Comments module first.
 
 * For default styling, make sure that the base template includes Bootstrap CSS, for instance using the Bootstrap module.
 * If you use the additional Comments module, JavaScript should be enabled in the browser.
+* By default no comments are shown; activate the Comments module first.
+
 
 ### Dispatch rules
 
@@ -32,6 +40,7 @@ To achieve this, check your dispatch rules. If possible you should remove `page`
 #### Duplicate content
 
 A site with multiple versions of the same content will be punished by Google. But if you enable the SEO Search Engine Optimization module, a "canonical" tag will be added to each page to point to the one "page" version. That way you don't have to worry that the same page can be accessed in 2 ways.
+
 
 ## Customizing
 
@@ -87,6 +96,3 @@ Although this module derives code from the skeleton blog, many differences exist
 * Added author view.
 * Added checks for published state of articles and tags.
 * Because of text changes, does currently no longer use a tranlations file.
-
-
-
