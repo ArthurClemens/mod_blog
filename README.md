@@ -12,7 +12,7 @@ Zotonic >= 0.7:
 
 Zotonic <= 0.6:
 
-        git clone https://github.com/ArthurClemens/mod_bulk_commands.git mod_bulk_commands
+        git clone https://github.com/ArthurClemens/mod_blog.git mod_blog
 
 Activate the module in System > Modules.
 
