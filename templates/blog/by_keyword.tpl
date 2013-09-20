@@ -4,28 +4,28 @@
 
 {% block chapeau %}
     <div class="span12">
-    	<h1>{{ m.rsc[q.id].title }} <small>{_ category archives _}</small></h1>
+    	<h1>{{ m.rsc[q.id].title }} <small>{_ articles _}</small></h1>
     </div>    
 {% endblock %}
 
 {% block content %}
 
-	{% with m.search.paged[{referrers id=q.id page=q.page pagelen=m.config.site.pagelen.value|default:10}] as result %}
+	{% with m.search.paged[{query sort='-publication_start' cat='article' hasobject=q.id pagelen=m.config.site.pagelen.value}] as result %}
 
         <ul class="media-list">
-            {% for id, predicate in result %}
+            {% for id in result %}
                 {% if id.is_published %}
                     {% include "blog/_article_summary.tpl" id=id %}
                 {% endif %}
             {% endfor %}
         </ul>
         
-		{% pager result=result dispatch=zotonic_dispatch id=id slug=m.rsc[id].slug %}
+		{% pager hide_single_page=1 result=result dispatch=zotonic_dispatch id=id slug=m.rsc[id].slug %}
 
 	{% endwith %}
 
 {% endblock %}
 
 {% block sidebar %}
-	{% include "blog/_sidebar.tpl" show_cloud=1 %}
+	{% include "blog/_sidebar.tpl" %}
 {% endblock %}
