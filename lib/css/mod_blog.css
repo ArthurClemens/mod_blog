@@ -3,14 +3,15 @@ figure{margin:0;}
 .hero-unit,.blog-header{padding:30px;text-shadow:0 1px 0 rgba(0, 0, 0, 0.15);color:#cdbfe3;background-color:#563d7c;}.hero-unit h1,.blog-header h1{font-size:60px;color:#fff;line-height:1;}
 .media-list h3{line-height:1.3;}
 .media-list li.media{margin-top:0;padding-bottom:20px;border-bottom:1px solid #eee;}.media-list li.media>a.pull-left{margin-right:20px;}
-.blog-sidebar{margin:0 0 20px 0;background:#f7f5fa;border-radius:5px;padding-top:10px;padding-bottom:10px;}.blog-sidebar h2,.blog-sidebar h3,.blog-sidebar h4,.blog-sidebar h5,.blog-sidebar h6{margin:0;padding:5px 20px;line-height:25px;}
+.blog-sidebar{margin:0 0 20px 0;background:#f7f5fa;border-radius:5px;padding-top:10px;padding-bottom:15px;}.blog-sidebar h2,.blog-sidebar h3,.blog-sidebar h4,.blog-sidebar h5,.blog-sidebar h6{margin:0;padding:5px 20px;line-height:25px;}
 .blog-sidebar .nav{color:#999;margin:0;}.blog-sidebar .nav>li>a{padding:5px 20px;}
 .blog-sidebar .nav .nav>li>a{padding:5px 20px 5px 40px;}
 .blog-sidebar .nav +h2,.blog-sidebar .nav +h3,.blog-sidebar .nav +h4,.blog-sidebar .nav +h5,.blog-sidebar .nav +h6{margin-top:10px;padding-top:15px;border-top:1px solid #e5e5e5;}
 .blog-sidebar .nav.blog-media>li{line-height:1.3;}.blog-sidebar .nav.blog-media>li>a{padding:0;margin:10px 20px;}.blog-sidebar .nav.blog-media>li>a:hover{background:none;}
 .blog-sidebar .nav.blog-media>li small.image-caption{line-height:.8;}
 .blog-sidebar .nav.blog-media>li img{margin:0 0 5px 0;}
-.blog-sidebar ul.blog-tags{list-style:none;padding:0;margin:0 20px;}.blog-sidebar ul.blog-tags>li{padding:0;margin:0;display:inline;font-size:0;}.blog-sidebar ul.blog-tags>li a{display:block;float:left;font-size:12px;line-height:1.4;margin:5px 5px 0 0;width:auto;}
+.blog-sidebar ul.blog-tags{list-style:none;padding:0;margin:0 20px;}.blog-sidebar ul.blog-tags>li{padding:0;margin:0;display:inline;font-size:0;}.blog-sidebar ul.blog-tags>li a{display:block;float:left;font-size:12px;line-height:1.4;margin:5px 5px 0 0;text-shadow:none;}.blog-sidebar ul.blog-tags>li a .muted{color:#ccc;}
+.blog-sidebar ul.blog-tags>li a:hover{background:#19558d;color:#fff;}
 .blog-article{margin:15px 0;font-size:16px;}
 #comments-list{list-style:none;margin:0;padding:0;}#comments-list h3{font-size:100%;font-weight:bold;line-height:1.8;}
 #comments-list .avatar{float:left;margin:0 20px 0 0;}
