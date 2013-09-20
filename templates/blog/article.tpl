@@ -1,4 +1,4 @@
-{% extends "blog/page.tpl" %}
+{% extends "blog/base.tpl" %}
 
 {% block title %}{{ m.rsc[id].title }}{% endblock %}
 
@@ -25,7 +25,9 @@ No summary on the detail page
 #}
 
     <article class="blog-article">
-	    {{ m.rsc[id].body|show_media }}
+        {% block below_summary %}
+    	    {{ m.rsc[id].body|show_media }}
+    	{% endblock %}
     </article>
     
 	{% include "_blocks.tpl" %}

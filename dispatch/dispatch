@@ -3,7 +3,7 @@
 [
  {blog,            ["blog"],                        controller_template,  [ {template, "blog/home.tpl"}, {id, page_blog} ]},
 
- {blog_media,      ["blog-media", id],              controller_page,      [ {template, "blog/page.tpl"} ]},
+ {blog_media,      ["blog-media", id],              controller_page,      [ {template, "blog/media.tpl"} ]},
 
  {blog_article,    ["article", id, slug],           controller_page,      [ {template, "blog/article.tpl"}, {cat, article} ]},
  {blog_article,    ["article", id],                 controller_page,      [ {template, "blog/article.tpl"}, {cat, article} ]},
