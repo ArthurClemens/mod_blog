@@ -9,6 +9,7 @@
 		{% all include "_html_head.tpl" %}
 
 		{% lib
+            "bootstrap/css/bootstrap.min.css"
 			"css/jquery.loadmask.css"
 			"css/z-menu.css"
 		%}

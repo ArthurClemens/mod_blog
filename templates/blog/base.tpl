@@ -16,9 +16,3 @@
     </div>
 
 {% endblock %}
-
-{% block _js_include_extra %}
-    {% lib
-        "js/bootstrap.min.js"
-    %}
-{% endblock %}
