@@ -38,7 +38,7 @@
 {{ m.rsc[id].title }}
 
 {% endfor %}
-{% pager result=result dispatch='page' id=id %}
+{% pager hide_single_page=1 result=result dispatch='page' id=id %}
 
 {% endwith %}
 
