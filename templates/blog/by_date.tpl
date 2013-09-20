@@ -1,15 +1,13 @@
 {% extends "blog/base.tpl" %}
 
-{% block title %}{_ Archive for _} {% if q.month %}{{ q.month }}, {% endif %}{{ q.year }}{% endblock %}
+{% block title %}{_ Articles from _} {% if q.month %}{{ q.month }}, {% endif %}{{ q.year }}{% endblock %}
 
-{% block chapeau %}
-    <div class="span12">
-    	<h1>{% if q.month %}{{ [q.year, q.month, 1]|date:"F" }}, {% endif %}{{ q.year }} <small>{_ articles _}</small></h1>
-    </div>    
+{% block blog_title %}
+    <h1>{% if q.month %}{{ [q.year, q.month, 1]|date:"F" }}, {% endif %}{{ q.year }} <small>{_ articles _}</small></h1>
 {% endblock %}
 
 
-{% block content %}
+{% block main %}
 
 	{% with m.search.paged[{query publication_year=q.year publication_month=q.month sort='-publication_start' cat=cat page=q.page pagelen=m.config.site.pagelen.value|default:10}] as result %}
 

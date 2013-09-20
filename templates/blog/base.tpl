@@ -1,18 +1,19 @@
-{% extends "blog/site_base.tpl" %}
+{% extends "base.tpl" %}
 
-{% block content_area %}
-    {% block chapeau %}{% endblock %}
-
-    <div class="span9">
-        {% block content %}
-            <!-- The default content goes here. -->
-        {% endblock %}
+{% block above %}
+    <div class="page-title row-fluid">
+        <div class="span12">
+            {% block blog_title %}{% endblock %}
+        </div>
     </div>
+{% endblock %}
 
-    <div id="sidebar" class="span3">
-        {% block sidebar %}
-            {% include "blog/_sidebar.tpl" %}
-        {% endblock %}
-    </div>
+{% block subnavbar %}
+    {% include "blog/_sidebar.tpl" %}
+{% endblock %}
 
+{% block html_head_extra %}
+    {% lib
+        "css/mod_blog.css"
+    %}
 {% endblock %}

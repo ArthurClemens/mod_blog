@@ -1,16 +1,14 @@
 {% extends "blog/base.tpl" %}
 
-{% block title %}{_ Articles for _} "{{ m.rsc[q.id].title }}"{% endblock %}
+{% block title %}{_ Articles on _} "{{ m.rsc[q.id].title }}"{% endblock %}
 
-{% block chapeau %}
-    <div class="span12">
-    	<h1>{{ m.rsc[q.id].title }} <small>{_ articles _}</small></h1>
-    </div>    
+{% block blog_title %}
+    <h1>{{ m.rsc[q.id].title }} <small>{_ articles _}</small></h1>
 {% endblock %}
 
-{% block content %}
+{% block main %}
 
-	{% with m.search.paged[{query sort='-publication_start' cat='article' hasobject=q.id pagelen=m.config.site.pagelen.value}] as result %}
+	{% with m.search.paged[{query sort='-publication_start' cat='article' hasobject=[q.id] pagelen=m.config.site.pagelen.value}] as result %}
 
         <ul class="media-list">
             {% for id in result %}
@@ -24,8 +22,4 @@
 
 	{% endwith %}
 
-{% endblock %}
-
-{% block sidebar %}
-	{% include "blog/_sidebar.tpl" %}
 {% endblock %}

@@ -27,42 +27,40 @@
   margin-left: 0;
   list-style: none;
 }
-body {
-  padding-top: 70px;
-  padding-bottom: 50px;
+h1 small {
+  display: inline-block;
 }
 figure {
   margin: 0 0 15px 0;
 }
 figure small.image-caption {
-  line-height: .8;
+  display: block;
+  margin: 10px 0 15px 0;
+  font-size: 94%;
+  line-height: 1.35;
 }
 figure img {
-  margin: 0 0 10px 0;
-}
-small {
-  font-size: 94%;
+  width: 100%;
 }
 .hero-unit,
 .blog-header {
+  font-size: 21px;
   padding: 30px;
 }
 .hero-unit h1,
 .blog-header h1 {
-  font-size: 60px;
+  font-size: 32px;
   line-height: 1;
 }
-.media-list h3 {
-  margin: 1em 0;
-  line-height: 1.3;
-}
 .media-list li.media {
-  margin-top: 0;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 .media-list li.media > a.pull-left {
   margin-right: 20px;
+}
+.media-list li.media p {
+  margin: 5px 0 10px 0;
 }
 [class*="span"] {
   min-height: 1em;
@@ -100,7 +98,7 @@ small {
 .blog-sidebar .nav  + h6 {
   margin-top: 10px;
   padding-top: 15px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #eeeeee;
 }
 .blog-sidebar .nav.blog-media > li {
   line-height: 1.3;
@@ -137,6 +135,9 @@ small {
 .blog-sidebar ul.blog-tags > li a:hover {
   background: #19558d;
   color: #fff;
+}
+.row-fluid #comments-form [class*="span"] {
+  float: none;
 }
 #comments-list {
   list-style: none;

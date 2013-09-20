@@ -8,4 +8,4 @@
 
 -mod_title("Blog").
 -mod_description("Zotonic's blog site as module.").
--mod_prio(1000).
+-mod_prio(20).
