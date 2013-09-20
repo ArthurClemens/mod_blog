@@ -13,7 +13,9 @@ By default no comments are shown; activate the Comments module first.
 
 ## Requirements
 
-* The blog homepage is a Text page named `page_blog`; you need to create that page
+* The blog homepage is a Text page named `page_blog`; you need to create that page. The title and body text are shown on the blog homepage.
+* Make sure you have a predicate with name `subject` that points from Article to Keyword or Tag (or any categorization).
+* Make sure you have a predicate with name `author` that points from Article to Person.
 * If you use the additional Comments module, JavaScript should be enabled in the browser.
 
 ## Customizing
