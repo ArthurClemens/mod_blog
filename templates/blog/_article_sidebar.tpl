@@ -6,8 +6,8 @@
             <ul class="nav blog-media">
                 {% for medium in media %}
                     <li>
-                        <a href="{% url blog_page id=medium.id %}">
-                            {% include "blog/_body_media.tpl" width=223 align="block" id=medium %}
+                        <a href="{% url blog_media id=medium.id %}">
+                            {% include "blog/_sidebar_media.tpl" width=223 align="block" id=medium %}
                         </a>
                     </li>
                 {% endfor %}
