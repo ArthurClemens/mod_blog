@@ -65,14 +65,15 @@ To add your own styles to `mod_blog.css`:
 * Create your custom CSS file in your `lib/css/` directory.
 * In your own `blog/base.tpl`, change block `html_head_extra`:
 
-    {% block html_head_extra %}
-        {% lib
-            "css/mod_blog.css"
-            "css/my_blog.css"
-        %}
-    {% endblock %}
+        {% block html_head_extra %}
+            {% lib
+                "css/mod_blog.css"
+                "css/my_blog.css"
+            %}
+        {% endblock %}
 
-To not use blog CSS at all, remove the block `html_head_extra`.
+
+To not use the blog CSS at all, remove the block `html_head_extra`.
 
 
 ## Differences with skeleton blog
