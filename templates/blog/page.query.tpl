@@ -11,7 +11,7 @@
 			{% endfor %}
 		</ul>
 
-		{% pager hide_single_page=true result=result dispatch="page" id=id %}
+		{% pager hide_single_page=1 result=result dispatch="page" id=id %}
 
 	{% endwith %}
 
