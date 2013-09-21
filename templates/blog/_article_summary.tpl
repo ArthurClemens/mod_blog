@@ -17,7 +17,7 @@ param: featured
                 </section>
             {% else %}
                 <figure class="image-wrapper block-level-image">
-                    <a href="{{m.rsc[id].page_url }}" title="{{ m.rsc[id].title }}">
+                    <a href="{% url blog_article id=id slug=m.rsc[id].slug %}" title="{{ m.rsc[id].title }}">
                         {% media m.rsc[id].media[1] mediaclass="blog_summary_big" alt=m.rsc[id].title %}
                     </a>
                 </figure>
