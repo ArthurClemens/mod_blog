@@ -7,7 +7,7 @@ Does not work well, removed until fixed
 
 	{% for id in m.search[{next cat='article' id=id pagelen=1}] %}
 		<div class="next">
-			<a class="btn btn-mini" href="{% url blog_article id=id slug=m.rsc[id].slug %}" title="{{ m.rsc[id].title }}">{_ Next post _} &raquo;</a>
+			<a class="btn btn-mini" href="{% url blog_article id=id slug=m.rsc[id].slug %}" title="{{ m.rsc[id].title }}">{_ Next post _}</a>
 		</div>
 	{% endfor %}
 
