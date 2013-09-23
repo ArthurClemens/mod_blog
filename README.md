@@ -21,7 +21,7 @@ Activate the module in Admin > System > Modules.
 
 * Create a Text page named `blog_home`; this is used on the blog homepage (title and body text). Name the page in the advanced section on the edit page.
 * Normally included in `basesite`:
-      * a predicate named `subject` that points from `article` to `keyword` (or any other categorization).
+      * a predicate named `subject` that points from `article` to `keyword`.
       * a predicate named `author` that points from `article` to `person`.
 
 ### Optional steps
@@ -96,3 +96,5 @@ Although this module derives code from the skeleton blog, many differences exist
 * Added author view.
 * Added checks for published state of articles and tags.
 * Because of text changes, does currently no longer use a tranlations file.
+* Media that are not put in the content are not displayed in the sidebar. Meaning that images that you want to display should be inserted in the body text.
+
