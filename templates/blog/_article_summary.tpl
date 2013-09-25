@@ -3,9 +3,11 @@ param: featured
 #}
 {%
     with m.rsc[id].media[1],
-    m.rsc[id].summary|default:m.rsc[id].body|striptags|truncate:300
+    m.rsc[id].summary|striptags,
+    m.rsc[id].body|striptags|truncate:300
     as
     image_id,
+    summary,
     excerpt
 %}
     {% if featured %}
@@ -27,7 +29,7 @@ param: featured
             {% include "blog/_article_meta.tpl" %}
             <div class="media-body">
                 <p>
-                    {{ excerpt }}
+                    {{ summary|default:excerpt }}
                 </p>
                 <a class="btn btn-mini" href="{% url blog_article id=id slug=m.rsc[id].slug %}">{_ Read more _}</a>
             </div>
@@ -43,7 +45,7 @@ param: featured
                 <h3><a href="{% url blog_article id=id slug=m.rsc[id].slug %}">{{ m.rsc[id].title }}</a></h3>
                 {% include "blog/_article_meta.tpl" %}
                 <p>
-                    {{ excerpt }}
+                    {{ summary|default:excerpt }}
                 </p>
                 <a class="btn btn-mini" href="{% url blog_article id=id slug=m.rsc[id].slug %}">{_ Read more _}</a>
             </div>
