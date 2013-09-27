@@ -1,6 +1,6 @@
 {% extends "blog/base.tpl" %}
 
-{% block title %}{_ Articles on _} "{{ m.rsc[q.id].title }}"{% endblock %}
+{% block title %}{_ Archived articles on _} {{ m.rsc[q.id].title }}{% endblock %}
 
 {% block blog_title %}
     <h1>{{ m.rsc[q.id].title }} <small>{_ articles _}</small></h1>
