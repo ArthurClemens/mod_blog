@@ -1,5 +1,5 @@
 {# Cache the sidebar, depending on the stuff in the 'article' category #}
-{% cache 3600 cat='article' %}
+{% cache 3600 vary=id vary=year vary=q.month cat='article' %}
 
 	{% optional include "blog/_tweets.tpl" %}
 
@@ -19,7 +19,10 @@
                 {% endif %}
                 
                 {% if tag_results %}
-                    {% include "blog/_sidebar_keywords.tpl" results=tag_results %}
+                    {% include
+                       "blog/_sidebar_keywords.tpl"
+                       results=tag_results
+                    %}
                 {% endif %}
 
             </div>
