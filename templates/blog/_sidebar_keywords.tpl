@@ -1,6 +1,6 @@
 <h4>{_ Articles on _}</h4>
 <ul class="blog-tags clearfix">
-    {% for id, count in results %}
-        <li><a class="label" href="{% url blog_keyword id=id slug=m.rsc[id].slug %}">{{ m.rsc[id].title }} <span class="muted">{{ count }}</span></a></li>
+    {% for keyword_id, count in results %}
+        <li><a class="label{% if keyword_id == id %} blog-selected-keyword{% endif %}" href="{% url blog_keyword id=keyword_id slug=m.rsc[keyword_id].slug %}">{{ m.rsc[keyword_id].title }} <span class="blog-archive-count">{{ count }}</span></a></li>
     {% endfor %}
 </ul>
