@@ -1,19 +1,27 @@
 @import "twitter-bootstrap/media.less";
 
 @mb_border_color: #eee;
+@mb_text_muted_color: #ccc;
+@mb_text_caption_color: #999;
+@mb_keyword_selected_background_color: #19558d;
+@mb_keyword_text_color: #fff;
 
-h1 small {
+h1 .blog-subheader {
     display: inline-block;
+    font-size: 70%; // small
+    color: @mb_text_muted_color
 }
 
 figure {
     margin: 0 0 15px 0;
-
+    position: relative;
+    
     small.image-caption {
         display: block;
-        margin: 10px 0 15px 0;
-        font-size: 94%;
-        line-height: 1.35;
+        margin: .5em 0;
+        font-size: inherit;
+        line-height: inherit;
+        color: @mb_text_caption_color;
     }
     img {
         width: 100%; // make image responsive
@@ -31,9 +39,18 @@ figure {
     }
 }
 
+.blog-article-meta {
+    &, a {
+        color: @mb_text_muted_color;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
 .media-list {
     
-    li.media {
+    li {
         padding-bottom: 20px;
         border-bottom: 1px solid @mb_border_color;
     
@@ -43,6 +60,17 @@ figure {
         
         p {
             margin: 5px 0 10px 0;
+        }
+        
+        .media-body {
+            a.blog-summary {
+                display: block;
+                color: inherit;
+                
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
@@ -65,17 +93,25 @@ figure {
     }
 
     .nav {
-        color: #999;
         margin: 0;
         
-        > li > a {
+        > li > a,
+        > li > span {
+            display: block;
             padding: 5px 20px;
         }
     
         .nav {
-            > li > a {
+            > li > a,
+            > li > span {
+                display: block;
                 padding: 5px 20px 5px 40px;
             }
+        }
+        
+        .blog-archive-count {
+            display: inline;
+            font-size: 80%;
         }
         
         & + h2,
@@ -116,23 +152,23 @@ figure {
             
             a {
                 display: block;
-//                background: #ecf1f7;
-//                color: #538dc2;
                 float: left;
-                font-size: 12px;
-                line-height: 1.4;
                 margin: 5px 5px 0 0;
                 text-shadow: none;
                 
-                .muted {
-                    color: #ccc;
+                .blog-archive-count {
+                    color: @mb_text_muted_color;
+                    font-weight: normal;
                 }
                 
+                &.blog-selected-keyword,
                 &:hover {
-                    background: #19558d;
-                    color: #fff;
-//                    background: #19558d;
-//                    color: #fff;
+                    background: @mb_keyword_selected_background_color;
+                    
+                    &,
+                    .blog-archive-count {
+                        color: @mb_keyword_text_color;
+                    }
                 }
             }
         }
