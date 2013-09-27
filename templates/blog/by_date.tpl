@@ -3,7 +3,7 @@
 {% block title %}{% block blog_by_date_title %}{_ Articles from _} {% if q.month %}{{ q.month }}, {% endif %}{{ q.year }}{% endblock %}{% endblock %}
 
 {% block blog_base_page_title %}{% block blog_by_date_page_title %}
-    <h1>{% if q.month %}{{ [q.year, q.month, 1]|date:"F" }}, {% endif %}{{ q.year }} <small>{_ articles _}</small></h1>
+    <h1>{% if q.month %}{{ [q.year, q.month, 1]|date:"F" }}, {% endif %}{{ q.year }} <span class="blog-subheader">{_ articles _}</span></h1>
 {% endblock %}{% endblock %}
 
 
@@ -19,7 +19,13 @@
             {% endfor %}
         </ul>
         
-		{% pager hide_single_page=1 result=result dispatch=zotonic_dispatch year=q.year month=q.month %}
+		{% pager
+		   hide_single_page=1
+		   result=result
+		   dispatch=zotonic_dispatch
+		   year=q.year
+		   month=q.month
+		%}
 
 	{% endwith %}
 

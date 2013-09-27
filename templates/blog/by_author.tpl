@@ -3,7 +3,7 @@
 {% block title %}{% block blog_by_author_title %}{_ Archived articles by _} {{ m.rsc[q.id].title }}{% endblock %}{% endblock %}
 
 {% block blog_base_page_title %}{% block blog_by_author_page_title %}
-    <h1>{{ m.rsc[q.id].title }} <small>{_ articles _}</small></h1>
+    <h1>{{ m.rsc[q.id].title }} <span class="blog-subheader">{_ articles _}</span></h1>
 {% endblock %}{% endblock %}
 
 {% block main %}{% block blog_by_author_main %}
@@ -18,7 +18,13 @@
             {% endfor %}
         </ul>
         
-		{% pager hide_single_page=1 result=result dispatch=zotonic_dispatch id=id slug=m.rsc[id].slug %}
+		{% pager
+		   hide_single_page=1
+		   result=result
+		   dispatch=zotonic_dispatch
+		   id=id
+		   slug=m.rsc[id].slug
+		%}
 
 	{% endwith %}
 
