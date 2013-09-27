@@ -25,13 +25,12 @@ param: featured
                 </figure>
             {% endifequal %}
         
-            <h3><a href="{% url blog_article id=id slug=m.rsc[id].slug %}">{{ m.rsc[id].title }}</a></h3>
-            {% include "blog/_article_meta.tpl" %}
+            <h3 class="media-heading"><a href="{% url blog_article id=id slug=m.rsc[id].slug %}">{{ m.rsc[id].title }}</a></h3>
             <div class="media-body">
-                <p>
+                <a class="blog-summary" href="{% url blog_article id=id slug=m.rsc[id].slug %}">
                     {{ summary|default:excerpt }}
-                </p>
-                <a class="btn btn-mini" href="{% url blog_article id=id slug=m.rsc[id].slug %}">{_ Read more _}</a>
+                </a>
+                {% include "blog/_article_meta.tpl" %}
             </div>
         </li>
     {% else %}
@@ -42,12 +41,11 @@ param: featured
                 </a>
             {% endif %}
             <div class="media-body">
-                <h3><a href="{% url blog_article id=id slug=m.rsc[id].slug %}">{{ m.rsc[id].title }}</a></h3>
-                {% include "blog/_article_meta.tpl" %}
-                <p>
+                <h3 class="media-heading"><a href="{% url blog_article id=id slug=m.rsc[id].slug %}">{{ m.rsc[id].title }}</a></h3>
+                <a class="blog-summary" href="{% url blog_article id=id slug=m.rsc[id].slug %}">
                     {{ summary|default:excerpt }}
-                </p>
-                <a class="btn btn-mini" href="{% url blog_article id=id slug=m.rsc[id].slug %}">{_ Read more _}</a>
+                </a>
+                {% include "blog/_article_meta.tpl" %}
             </div>
         </li>
     {% endif %}
