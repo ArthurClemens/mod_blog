@@ -1,13 +1,13 @@
-{% extends "blog/base.tpl" %}
+{% extends "blog/_base.tpl" %}
 
-{% block blog_title %}
+{% block blog_base_page_title %}
     <div class="hero-unit">
         <h1>{{ m.rsc[id].title }}</h1>
         {{ m.rsc[id].body }}
     </div>
 {% endblock %}
 
-{% block main %}
+{% block main %}{% block blog_home_main %}
 
     {% with m.search[{query cat='article' sort='-publication_start' pagelen=m.config.site.pagelen.value|default:5}] as result %}
 
@@ -26,4 +26,4 @@
         
     {% endwith %}
     
-{% endblock %}
+{% endblock %}{% endblock %}

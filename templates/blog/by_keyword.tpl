@@ -1,12 +1,12 @@
-{% extends "blog/base.tpl" %}
+{% extends "blog/_base.tpl" %}
 
-{% block title %}{_ Archived articles on _} {{ m.rsc[q.id].title }}{% endblock %}
+{% block title %}{% block blog_by_keyword_title %}{_ Archived articles on _} {{ m.rsc[q.id].title }}{% endblock %}{% endblock %}
 
-{% block blog_title %}
+{% block blog_base_page_title %}{% block blog_by_keyword_blog_title %}
     <h1>{{ m.rsc[q.id].title }} <small>{_ articles _}</small></h1>
-{% endblock %}
+{% endblock %}{% endblock %}
 
-{% block main %}
+{% block main %}{% block blog_by_keyword_main %}
 
 	{% with m.search.paged[{query sort='-publication_start' cat='article' hasobject=[q.id] pagelen=m.config.site.pagelen.value}] as result %}
 
@@ -22,4 +22,4 @@
 
 	{% endwith %}
 
-{% endblock %}
+{% endblock %}{% endblock %}

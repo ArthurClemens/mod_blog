@@ -1,6 +1,6 @@
 {% extends "blog/article.tpl" %}
 
-{% block below_summary %}
+{% block blog_article_below_summary %}
     {% if m.rsc[id].depiction %}
         <figure class="image-wrapper block-level-image">
             {% media m.rsc[id].depiction mediaclass="blog_media" alt=m.rsc[id].title %}
@@ -8,4 +8,4 @@
     {% endif %}
 {% endblock %}
 
-{% block comments %}{% endblock %}
+{% block blog_article_comments %}{% endblock %}
