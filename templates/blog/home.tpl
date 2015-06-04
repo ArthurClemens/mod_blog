@@ -1,7 +1,7 @@
 {% extends "blog/base.tpl" %}
 
 {% block blog_title %}
-    <div class="hero-unit">
+    <div class="jumbotron">
         <h1>{{ m.rsc[id].title }}</h1>
         {{ m.rsc[id].body }}
     </div>
