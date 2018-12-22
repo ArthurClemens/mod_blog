@@ -1,6 +1,6 @@
 {% extends "blog/base.tpl" %}
 
-{% block title %}{_ Articles from _} {% if q.month %}{{ q.month }}, {% endif %}{{ q.year }}{% endblock %}
+{% block title %}{_ Articles from _} {% if q.month %}{{ q.month|escape }}, {% endif %}{{ q.year|escape }}{% endblock %}
 
 {% block blog_title %}
     <h1>{% if q.month %}{{ [q.year, q.month, 1]|date:"F" }}, {% endif %}{{ q.year }} <small>{_ articles _}</small></h1>

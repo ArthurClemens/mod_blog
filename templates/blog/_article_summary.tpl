@@ -31,7 +31,7 @@ param: featured
                 <p>
                     {{ summary|default:excerpt }}
                 </p>
-                <a class="btn btn-mini" href="{% url blog_article id=id slug=m.rsc[id].slug %}">{_ Read more _}</a>
+                <a class="btn btn-default btn-xs" href="{% url blog_article id=id slug=m.rsc[id].slug %}">{_ Read more _}</a>
             </div>
         </li>
     {% else %}
@@ -47,7 +47,7 @@ param: featured
                 <p>
                     {{ summary|default:excerpt }}
                 </p>
-                <a class="btn btn-mini" href="{% url blog_article id=id slug=m.rsc[id].slug %}">{_ Read more _}</a>
+                <a class="btn btn-default btn-xs" href="{% url blog_article id=id slug=m.rsc[id].slug %}">{_ Read more _}</a>
             </div>
         </li>
     {% endif %}

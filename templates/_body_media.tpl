@@ -6,12 +6,12 @@
 	{% else %}
 		<figure class="image-wrapper block-level-image">
 			{% media m.rsc[id].medium mediaclass="blog_article" alt=m.rsc[id].title %}
-			{% with id|summary as summary %}{% if summary %}<small class="muted image-caption">{{ summary }}</small>{% endif %}{% endwith %}
+			{% with id|summary as summary %}{% if summary %}<small class="text-muted image-caption">{{ summary }}</small>{% endif %}{% endwith %}
 		</figure>
 	{% endifequal %}
 {% else %}
     <figure class="image-wrapper block-level-image">
     	{% media m.rsc[id].medium mediaclass="blog_article" alt=m.rsc[id].title %}
-    	{% with id|summary as summary %}{% if summary %}<small class="muted image-caption">{{ summary }}</small>{% endif %}{% endwith %}
+    	{% with id|summary as summary %}{% if summary %}<small class="text-muted image-caption">{{ summary }}</small>{% endif %}{% endwith %}
     </figure>
 {% endifequal %}
